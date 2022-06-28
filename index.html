@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <br />
+        <div class="field-body-label is-normal">
+            <b>Регистрация</b>
+        </div>
+        <br />
+
+        <div class="columns">
+            <div class="column is-1"></div>
+            <div class="column">
+                <b>Вы регистрируетесь как</b> <br />
+                <label class="radio">
+                    <input type="radio" id="buyerid" onclick="check1();" name="buyer">
+                    Покупатель
+                </label>
+                <br />
+                <label class="radio">
+                    <input type="radio" id="providerid" onclick="check2();" name="buyer">
+                    Поставщик
+                </label>
+            </div>
+        </div>
+
+        <br /><br />
+
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                Эл. почта
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <p class="control is-expanded ">
+                        <input class="input column is-two-fifths" id="email" type="text">
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="field is-horizontal">
+            <div class="field-body ">
+                <b>Название организации</b>
+            </div>
+        </div>
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                ИП или Юр.Лицо
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <p class="control is-expanded ">
+                        <input class="input column is-two-fifths" id="iplaw" type="text">
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                ИНН
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <p class="control is-expanded ">
+                        <input class="input column is-two-fifths" id="ITN" type="text">
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="field is-horizontal">
+            <div class="field-body">
+                <b>Фактический адрес</b>
+            </div>
+        </div>
+
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                Ваш город
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <p class="control is-expanded ">
+                        <input class="input column is-two-fifths" id="city" type="text">
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label>Улица</label>
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <p class="control">
+                        <input class="input column is-9" id="dist" type="text">
+                    </p>
+                </div>
+                <div class="field-label is-normal">
+                    <label>Дом/стр.</label>
+                </div>
+                <div class="field">
+                    <p class="control">
+                        <input class="input column is-9" id="building" type="text">
+                    </p>
+                </div>
+                <div class="field-label is-normal">
+                    <label>Офис</label>
+                </div>
+                <div class="field">
+                    <p class="control">
+                        <input class="input column is-4" id="room" type="text">
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label>Ваш телефон</label>
+            </div>
+            <div class="field-body">
+                <div class="field has-addons ">
+                    <div class="control">
+                        <a class="button is-static">
+                            +7
+                        </a>
+                    </div>
+                    <div class="control is-expanded">
+                        <input class="input" type="tel" id="phone">
+                    </div>
+                    <div class="column is-three-fifths">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="compsait">
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    Сайт вашей компании
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <p class="control is-expanded">
+                            <input class="input column is-two-fifths" id="site" type="text">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div> <br>
+
+
+        <div class="field is-horizontal">
+            <div class="field-body">
+                <b>Виды деятельности</b>
+            </div>
+        </div>
+
+        <div class="field is-horizontal">
+            <div class="field-label">
+                Магазин
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <input type="checkbox">
+                </div>
+            </div>
+        </div>
+        <div class="field is-horizontal">
+            <div class="field-label">
+                Региональная сеть магазинов
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <input type="checkbox">
+                </div>
+            </div>
+        </div>
+        <div class="field is-horizontal">
+            <div class="field-label">
+                Федеральная сеть магазинов
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <input type="checkbox">
+                </div>
+            </div>
+        </div>
+        <div class="field is-horizontal">
+            <div class="field-label">
+                интернет-магазин
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <input type="checkbox">
+                </div>
+            </div>
+        </div>
+        <div class="field is-horizontal">
+            <div class="field-label">
+                Автосервис
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <input type="checkbox">
+                </div>
+            </div>
+        </div>
+
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <h5>Прочее</h5>
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <p class="control">
+                        <input class="input column is-two-fifths" type="email" placeholder=" ">
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="popup" class="modal">
+            <div class="modal-background"></div>
+
+            <div class="modal-content">
+                <div class="box">
+                    <p>
+                    <h1>Вы успешно зарегестрировались</h1>
+                    </p>
+                </div>
+            </div>
+
+            <button class="modal-close is-large" onclick="deactivatepopup()" aria-label="close"></button>
+        </div>
+
+        <div class="columns">
+            <div class="column ">
+                <button class="button is-link " onclick="activatepopup()">Отправить
+                    заявку</button>
+            </div>
+        </div>
+
+        <br />
+    </div>
+
+</body>
+<script>
+    function activatepopup() {
+        let emailPassed = false
+        let phonePassed = false
+        let iplawPassed = false
+        let ITNPassed = false
+        let citylPassed = false
+        let distrlPassed = false
+        let buildPassed = false
+        let roomPassed = false
+
+        if (document.getElementById("email").value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+            emailPassed = true
+            document.getElementById("email").classList.remove('is-danger')
+        } else document.getElementById("email").classList.add('is-danger')
+
+        if(document.getElementById("phone").value.match(/^[0-9]{10}$/)){
+            phonePassed = true
+            document.getElementById("phone").classList.remove('is-danger')
+        } else document.getElementById("phone").classList.add('is-danger')
+
+        if(document.getElementById("iplaw").value != ""){
+            iplawPassed = true
+            document.getElementById("iplaw").classList.remove('is-danger')
+        } else document.getElementById("iplaw").classList.add('is-danger')
+
+        if(document.getElementById("ITN").value != ""){
+            ITNPassed = true
+            document.getElementById("ITN").classList.remove('is-danger')
+        } else document.getElementById("ITN").classList.add('is-danger')
+        
+        if(document.getElementById("city").value != ""){
+            citylPassed = true
+            document.getElementById("city").classList.remove('is-danger')
+        } else document.getElementById("city").classList.add('is-danger')
+
+        if(document.getElementById("dist").value != ""){
+            distrlPassed = true
+            document.getElementById("dist").classList.remove('is-danger')
+        } else document.getElementById("dist").classList.add('is-danger')
+
+        if(document.getElementById("building").value != ""){
+            buildPassed = true
+            document.getElementById("building").classList.remove('is-danger')
+        } else document.getElementById("building").classList.add('is-danger')
+
+        if(document.getElementById("room").value != ""){
+            roomPassed = true
+            document.getElementById("room").classList.remove('is-danger')
+        } else document.getElementById("room").classList.add('is-danger')
+
+        if (emailPassed && phonePassed && iplawPassed && ITNPassed && citylPassed && distrlPassed && buildPassed && roomPassed)  {
+            document.getElementById("popup").classList.add('is-active')
+        }
+
+        
+    }
+    
+    
+
+    function deactivatepopup() {
+        document.getElementById("popup").classList.remove('is-active')
+    }
+    function check1() {
+        document.getElementById('compsait').style.display = 'none'
+    }
+    function check2() {
+        document.getElementById('compsait').style.display = 'block'
+    }
+
+</script>
+
+</html>
