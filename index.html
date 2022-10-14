@@ -8,15 +8,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Регистрация</title>
 </head>
-<body>
 
+<body>
+    <br>
+    <div class="container">
+        <div class="notification">
+            <header class="title"> Это регистрация на сайте по продаже автозапчастей</header>
+        </div>
+    </div>
     <div class="container">
         <br />
         <div class="field-body-label is-normal">
             <b>Регистрация</b>
         </div>
         <br />
-
         <div class="columns">
             <div class="column is-1"></div>
             <div class="column">
@@ -264,48 +269,48 @@
             document.getElementById("email").classList.remove('is-danger')
         } else document.getElementById("email").classList.add('is-danger')
 
-        if(document.getElementById("phone").value.match(/^[0-9]{10}$/)){
+        if (document.getElementById("phone").value.match(/^[0-9]{10}$/)) {
             phonePassed = true
             document.getElementById("phone").classList.remove('is-danger')
         } else document.getElementById("phone").classList.add('is-danger')
 
-        if(document.getElementById("iplaw").value != ""){
+        if (document.getElementById("iplaw").value != "") {
             iplawPassed = true
             document.getElementById("iplaw").classList.remove('is-danger')
         } else document.getElementById("iplaw").classList.add('is-danger')
 
-        if(document.getElementById("ITN").value != ""){
+        if (document.getElementById("ITN").value != "") {
             ITNPassed = true
             document.getElementById("ITN").classList.remove('is-danger')
         } else document.getElementById("ITN").classList.add('is-danger')
-        
-        if(document.getElementById("city").value != ""){
+
+        if (document.getElementById("city").value != "") {
             citylPassed = true
             document.getElementById("city").classList.remove('is-danger')
         } else document.getElementById("city").classList.add('is-danger')
 
-        if(document.getElementById("dist").value != ""){
+        if (document.getElementById("dist").value != "") {
             distrlPassed = true
             document.getElementById("dist").classList.remove('is-danger')
         } else document.getElementById("dist").classList.add('is-danger')
 
-        if(document.getElementById("building").value != ""){
+        if (document.getElementById("building").value != "") {
             buildPassed = true
             document.getElementById("building").classList.remove('is-danger')
         } else document.getElementById("building").classList.add('is-danger')
 
-        if(document.getElementById("room").value != ""){
+        if (document.getElementById("room").value != "") {
             roomPassed = true
             document.getElementById("room").classList.remove('is-danger')
         } else document.getElementById("room").classList.add('is-danger')
 
-        if (emailPassed && phonePassed && iplawPassed && ITNPassed && citylPassed && distrlPassed && buildPassed && roomPassed)  {
+        if (emailPassed && phonePassed && iplawPassed && ITNPassed && citylPassed && distrlPassed && buildPassed && roomPassed) {
             document.getElementById("popup").classList.add('is-active')
         }
 
-        
+
     }
-    
+
     function deactivatepopup() {
         document.getElementById("popup").classList.remove('is-active')
     }
